@@ -1,0 +1,135 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Style du conteneur de boutons */
+.button-container {
+  position: absolute;
+  top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  width: 150px;
+  transition: left 0.3s, right 0.3s;
+  z-index: 10;
+}
+
+.button-container.left {
+  left: 20px;
+}
+
+.button-container.right {
+  right: 20px;
+}
+
+/* Conteneur pour le générateur de code en bas */
+.code-generator-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+/* Zone de dessin */
+.drawing-area {
+  border: 1px solid #ddd;
+  min-height: 600px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+}
+
+/* Style des classes */
+.class-box {
+  border: 1px solid #000; /* Bordure de la boîte de classe */
+  border-radius: 5px; /* Coins arrondis */
+  padding: 10px; /* Espacement interne */
+  margin: 10px; /* Espacement externe entre les boîtes */
+  background-color: #f9f9f9; /* Couleur de fond */
+  position: absolute; /* Nécessaire pour le positionnement */
+}
+
+.class-name {
+  font-weight: bold; /* Met le nom de la classe en gras */
+  text-align: center; /* Centre le nom de la classe */
+}
+
+.class-attributes,
+.class-methods {
+  margin-top: 5px; /* Espacement supérieur */
+}
+
+hr {
+  border: 1px solid #ccc; /* Style de la ligne de séparation */
+  margin: 5px 0; /* Marges verticales autour de la ligne */
+}
+
+.class-attributes div,
+.class-methods div {
+  margin: 2px 0;
+  color: #343a40;
+}
+
+/* Style des relations */
+.relationship {
+  position: absolute; /* Pour pouvoir les positionner */
+  color: #6c757d;
+  font-size: 0.9em;
+  padding: 5px;
+}
+
+/* Ligne de relation */
+.relationship-line {
+  stroke: black;
+  stroke-width: 2;
+}
+
+/* Style SVG pour les lignes de relation */
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Pour ne pas interférer avec les événements de la souris */
+}
